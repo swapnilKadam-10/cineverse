@@ -1,7 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { useTitle } from "../hooks/useTitle";
-import { MovieCard } from "../components";
+import { MovieCard, ScrollToTopButton } from "../components";
+
 
 export const Search = ({ apiPath }) => {
   const [searchParams] = useSearchParams();
@@ -25,6 +26,7 @@ export const Search = ({ apiPath }) => {
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
+        <ScrollToTopButton />
       </section>
     </main>
   );
