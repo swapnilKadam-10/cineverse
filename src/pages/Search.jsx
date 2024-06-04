@@ -20,7 +20,7 @@ export const Search = ({ apiPath }) => {
         </p>
       </section>
       <section className="mx-auto py-7">
-        <div className="flex justify-start flex-wrap">
+        <div className="flex justify-start flex-wrap other:justify-evenly">
           {movies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
